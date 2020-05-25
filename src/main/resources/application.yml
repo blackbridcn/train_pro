@@ -1,0 +1,30 @@
+
+
+server:
+       port: 8091
+
+       servlet:
+         context-path: /train
+
+
+
+#spring:  #表示该配置直接为Spring容器负责处理
+
+      #profiles: #区分不通环境下的配置文件
+       # active: dev
+
+spring:
+      #profiles: dev #开发环境下配置
+
+         # 项目访问路径
+    #  datasource:
+    #     type: com.alibaba.druid.pool.DruidDataSource  #配置当前要使用的数据源的操作类型那个
+    #     driver-class-name: com.mysql.cj.jdbc.Driver
+    #     url: jdbc:mysql://localhost:3306/train_db?useUnicode=true&characterEncoding=utf8
+    #     username: root
+    #    password: user123456
+mybatis:
+  check-config-location: true
+  mapper-locations:
+  type-aliases-package:
+
