@@ -39,7 +39,7 @@ logging:
       root: debug
 
 config:
-     version: 1.0.1
+     version: 1
      encrypt: false
      password: a123456789
      deviceType: HIKVISION

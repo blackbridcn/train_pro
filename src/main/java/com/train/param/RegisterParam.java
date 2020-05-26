@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 /**
@@ -40,6 +41,7 @@ public class RegisterParam {
     @ApiModelProperty("手机号，NotBlank")
     private String phone;
 
+    @Email
     @ApiModelProperty("邮箱")
     private String email;
 

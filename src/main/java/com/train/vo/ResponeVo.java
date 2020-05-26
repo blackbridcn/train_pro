@@ -17,6 +17,14 @@ public class ResponeVo<T> {
     @ApiModelProperty("data")
     private T data;
 
+    public static ResponeVo success(){
+        ResponeVo vo = new ResponeVo();
+        vo.setData("成功");
+        vo.setCode(0);
+        vo.setMsg("成功");
+        return vo;
+    }
+
     public int getCode() {
         return code;
     }
