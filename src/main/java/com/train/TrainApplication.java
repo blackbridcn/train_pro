@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -24,7 +25,12 @@ public class TrainApplication implements CommandLineRunner {
     @Autowired
     DataSource dataSource;
 
+    public static String[] args;
+    public static ConfigurableApplicationContext context;
+
     public static void main(String[] args) {
+        TrainApplication.args=args;
+        TrainApplication.context = SpringApplication.run(TrainApplication.class, args);
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext*.xml");
         SpringApplication.run(TrainApplication.class, args);
     }

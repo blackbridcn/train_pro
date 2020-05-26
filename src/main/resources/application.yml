@@ -6,6 +6,12 @@ server:
        servlet:
          context-path: /train
 
+spring:
+  datasource:
+    username: root
+    password: user123456
+    url: jdbc:mysql://127.0.0.1:3306/train_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name : com.mysql.cj.jdbc.Driver
 
 
 #spring:  #表示该配置直接为Spring容器负责处理
@@ -13,7 +19,7 @@ server:
       #profiles: #区分不通环境下的配置文件
        # active: dev
 
-spring:
+#spring:
       #profiles: dev #开发环境下配置
 
          # 项目访问路径
@@ -27,4 +33,17 @@ mybatis:
   check-config-location: true
   mapper-locations:
   type-aliases-package:
+
+logging:
+   level:
+      root: debug
+
+config:
+     version: 1.0.1
+     encrypt: false
+     password: a123456789
+     deviceType: HIKVISION
+     host : 192.168.1.153
+     appKey : 27857924
+     appSecret : 7knNk0zjY08KNgZgGVTQ
 

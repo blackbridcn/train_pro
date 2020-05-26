@@ -59,8 +59,6 @@
             <optional>true</optional>
         </dependency>
 
-
-
         <!--数据库-->
         <dependency>
             <groupId>mysql</groupId>
@@ -73,20 +71,18 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <dependency>
+<!--        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.22</version>
         </dependency>-->
 
 
-
-        <dependency>
+  <!--      <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuaor</artifactId>
-        </dependency>
-
-
+            <version>RELEASE</version>
+        </dependency>-->
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -117,6 +113,12 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
         </dependency>
 
     </dependencies>
