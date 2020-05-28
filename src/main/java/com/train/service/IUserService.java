@@ -1,7 +1,7 @@
 package com.train.service;
 
 import com.train.param.RegisterParam;
-import com.train.vo.ResponeVo;
+import com.train.vo.ResponseVo;
 
 /**
  * Author: yuzzha
@@ -11,5 +11,5 @@ import com.train.vo.ResponeVo;
 public interface IUserService {
 
 
-    ResponeVo doRegisterTask(RegisterParam param);
+    ResponseVo doRegisterTask(RegisterParam param, String userAgent,String ip);
 }

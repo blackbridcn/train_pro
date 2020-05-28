@@ -578,4 +578,28 @@ public class UserData {
     public void setUpdate_time(Date update_time) {
         this.update_time = update_time;
     }
+
+    @Override
+    public String toString() {
+        return "UserData{" +
+                "id=" + id +
+                ", uid=" + uid +
+                ", username='" + username + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", gender='" + gender + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", identity_type=" + identity_type +
+                ", identifier='" + identifier + '\'' +
+                ", certificate='" + certificate + '\'' +
+                ", avatar_name='" + avatar_name + '\'' +
+                ", avatar_path='" + avatar_path + '\'' +
+                ", password='" + password + '\'' +
+                ", enabled=" + enabled +
+                ", update_by='" + update_by + '\'' +
+                ", pwd_reset_time=" + pwd_reset_time +
+                ", create_time=" + create_time +
+                ", update_time=" + update_time +
+                '}';
+    }
 }
