@@ -1,7 +1,5 @@
-
-
 CREATE TABLE `tb_user` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `id` bigint(20) PRIMARY KEY AUTO_INCREMENT COMMENT 'ID',
   `uid` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '用户id',
   `username` varchar(255) DEFAULT NULL COMMENT '用户名',
   `nickname` varchar(255) DEFAULT NULL COMMENT '昵称',
@@ -19,9 +17,10 @@ CREATE TABLE `tb_user` (
   `pwd_reset_time` datetime DEFAULT NULL COMMENT '修改密码的时间',
   `create_time` datetime DEFAULT NULL COMMENT '创建日期',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`),
+
   UNIQUE KEY `only` (`uid`,`identity_type`)
-)
+);
+drop  table  tb_user
 
 
 ##用户扩展信息
@@ -70,15 +69,16 @@ CREATE TABLE `tb_register_log` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `uid` bigint(20) unsigned NOT NULL COMMENT '用户ID',
   `register_method` tinyint(2) unsigned NOT NULL COMMENT '注册方式1手机号 2邮箱 3用户名 4qq 5微信 6腾讯微博 7新浪微博',
-  `register_time` int(11) NOT NULL COMMENT '注册时间',
+  `register_time` datetime DEFAULT NULL COMMENT '注册时间',
   `register_ip` varchar(16) NOT NULL DEFAULT '' COMMENT '注册IP',
   `register_client` varchar(16) NOT NULL DEFAULT '' COMMENT '注册客户端',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COMMENT='用户注册日志表';
 
+DROP TABLE tb_register_log
 
 ##修改信息日志
-CREATE TABLE `user_info_update` (
+CREATE TABLE `tb_user_info_update` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增ID',
   `uid` bigint(20) unsigned NOT NULL COMMENT '用户ID',
   `attribute_name` varchar(30) NOT NULL COMMENT '属性名',
@@ -87,3 +87,5 @@ CREATE TABLE `user_info_update` (
   `update_time` int(11) NOT NULL COMMENT '修改时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COMMENT='用户注册日志表'
+
+DROP  TABLE  user_info_update
