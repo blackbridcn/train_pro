@@ -1,6 +1,6 @@
 spring:
   datasource:
-    username: root
-    password: user123456
-    url: jdbc:mysql://127.0.0.1:3306/train_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
-    driver-class-name : com.mysql.cj.jdbc.Driver
+      username: sa
+      password: U$er123456
+      url:  jdbc:sqlserver://192.168.1.117:1433;databasename=api2019
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

@@ -1,10 +1,8 @@
 
-
 server:
-       port: 8091
-
-       servlet:
-         context-path: /train
+    port: 8091
+    servlet:
+      context-path: /train
 
 spring:
   datasource:
@@ -13,39 +11,10 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/train_db?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name : com.mysql.cj.jdbc.Driver
 
-    initialSize: 5
-    minIdle: 10
-    maxActive: 20
-    maxWait: 60000
-    timeBetweenEvictionRunsMillis: 30000
-    minEvictableIdleTimeMillis: 30000
-    validationQuery: SELECT 'x'
-    testWhileIdle: true
-    testOnBorrow: false
-    testOnReturn: false
-
-    poolPreparedStatements: true
-    maxPoolPreparedStatementPerConnectionSize: 20
-    filters: stat,slf4j
-#       filters: stat,wall,slf4j
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
-    useGlobalDataSourceStat: true
-
-#spring:  #表示该配置直接为Spring容器负责处理
-
-      #profiles: #区分不通环境下的配置文件
-       # active: dev
-
-#spring:
-      #profiles: dev #开发环境下配置
-
-         # 项目访问路径
-    #  datasource:
-    #     type: com.alibaba.druid.pool.DruidDataSource  #配置当前要使用的数据源的操作类型那个
-    #     driver-class-name: com.mysql.cj.jdbc.Driver
-    #     url: jdbc:mysql://localhost:3306/train_db?useUnicode=true&characterEncoding=utf8
-    #     username: root
-    #    password: user123456
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
 
 mybatis:
       mapper-locations: classpath:mapperxml/*.xml
@@ -56,11 +25,11 @@ logging:
       root: debug
 
 config:
-     version: 1
-     encrypt: false
-     password: a123456789
-     deviceType: HIKVISION
-     host : 192.168.1.153
-     appKey : 27857924
-     appSecret : 7knNk0zjY08KNgZgGVTQ
+    version: 1
+    encrypt: false
+    password: a123456789
+    deviceType: HIKVISION
+    host : 192.168.1.153
+    appKey : 27857924
+    appSecret : 7knNk0zjY08KNgZgGVTQ
 
